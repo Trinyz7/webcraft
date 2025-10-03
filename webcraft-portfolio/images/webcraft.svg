@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" role="img" aria-labelledby="title desc">
+  <title id="title">WebCraft Solution — Logotype</title>
+  <desc id="desc">Logotype avec monogramme W en trait bleu et texte WebCraft Solution.</desc>
+
+  <!-- Monogram W -->
+  <g transform="translate(40,40)">
+    <!-- Large W made of rounded strokes -->
+    <polyline points="10,10 55,210 100,80 145,210 190,10"
+              fill="none" stroke="#2286f1" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Inner highlight stroke to mimic double-line style -->
+    <polyline points="42,10 75,160 100,100 125,160 158,10"
+              fill="none" stroke="#2286f1" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Brand text -->
+  <g font-family="Inter, Segoe UI, Roboto, Arial, sans-serif" transform="translate(260,120)">
+    <text x="0" y="0" font-size="96" font-weight="700" fill="#2286f1">WEBCRAFT</text>
+    <text x="2" y="66" font-size="52" font-weight="600" fill="#6b717b" letter-spacing="8">SOLUTION</text>
+  </g>
+</svg>

@@ -1,49 +1,75 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - WebCraft Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/logo.png" type="image/svg+xml" />
+
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <h1>WebCraft Solutions</h1>
-            </div>
+        <header class="header" role="banner">
+        <div class="container header-inner">
+            <a class="logo" href="index.html" aria-label="Retour à l'accueil">
+                <img src="images/webcraft.svg" alt="Logo WebCraft Solutions" class="logo-img" height="40" />
+            </a>
             <nav class="nav" role="navigation">
                 <ul>
-                    <li><a href="index.html" aria-label="Accueil">Accueil</a></li>
-                    <li><a href="about.html" aria-label="À propos">À propos</a></li>
-                    <li><a href="contact.html" aria-label="Contact">Contact</a></li>
+                    <li><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li><a class="nav-link" href="about.html">À propos</a></li>
+                    <li><a class="nav-link active" href="contact.html">Contact</a></li>
                 </ul>
             </nav>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Basculer le thème"><span class="sun">☀️</span><span class="moon">🌙</span></button>
         </div>
     </header>
 
-    <!-- Contact Section -->
     <section class="contact-hero">
         <div class="container">
-            <h2>Contactez-nous</h2>
-            <p class="subtitle">Parlons de votre projet</p>
+            <h1>Contactez‑nous</h1>
+            <p class="subtitle">Parlons de votre projet ✨</p>
         </div>
     </section>
 
     <section class="contact-content">
         <div class="container">
-            <form id="contact-form" class="contact-form" novalidate>
+            <form id="contact-form" class="contact-form card" novalidate>
                 <div class="form-group">
                     <label for="name">Nom complet <span class="required">*</span></label>
-                    <input type="text" id="name" name="name" required aria-required="true">
+                    <input type="text" id="name" name="name" required aria-required="true" />
                     <span class="error-text" id="name-error"></span>
                 </div>
 
                 <div class="form-group">
                     <label for="email">Email <span class="required">*</span></label>
-                    <input type="email" id="email" name="email" required aria-required="true">
+                    <input type="email" id="email" name="email" required aria-required="true" />
                     <span class="error-text" id="email-error"></span>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="budget">Budget estimé</label>
+                        <select id="budget" name="budget">
+                            <option value="">Sélectionner…</option>
+                            <option>< 2 000 €</option>
+                            <option>2 000 – 5 000 €</option>
+                            <option>5 000 – 15 000 €</option>
+                            <option>> 15 000 €</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="type">Type de projet</label>
+                        <select id="type" name="type">
+                            <option>Site vitrine</option>
+                            <option>E‑commerce</option>
+                            <option>Application web</option>
+                            <option>Refonte</option>
+                        </select>
+                    </div>
                 </div>
 
                 <div class="form-group">
@@ -55,24 +81,48 @@
                 <button type="submit" class="btn-submit">Envoyer</button>
             </form>
 
+            <div class="contact-side">
+                <div class="card">
+                    <h3>Pourquoi nous ?</h3>
+                    <ul class="checklist">
+                        <li>Approche orientée ROI</li>
+                        <li>Design system réutilisable</li>
+                        <li>Support et maintenance</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Nous trouver</h3>
+                    <p class="muted">Basés à Paris · Remote friendly</p>
+                    
+                    <div class="map-placeholder" role="img" aria-label="Emplacement de l'agence"><iframe
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5257.284663370262!2d2.3637513!3d48.78871819999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e673e24e04a9c3%3A0xc55cb3e676f95321!2sEfrei!5e0!3m2!1sfr!2sfr!4v1759486826438!5m2!1sfr!2sfr"
+                          width="100%" height="100%"
+                          style="border:0; border-radius:12px;"
+                          allowfullscreen=""
+                          loading="lazy"
+                          referrerpolicy="no-referrer-when-downgrade"
+                          title="Localisation WebCraft Solutions">
+                        </iframe></div>
+                </div>
+            </div>
+
             <div id="success-message" class="success-message" style="display: none;" role="alert">
-                <p>Merci pour votre message ! Nous vous répondrons dans les plus brefs délais.</p>
+                <p>Merci pour votre message ! Nous vous répondrons très vite.</p>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 WebCraft Solutions. Tous droits réservés.</p>
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> WebCraft Solutions. Tous droits réservés.</p>
             <div class="social-links">
-                <a href="#" aria-label="Facebook">Facebook</a>
-                <a href="#" aria-label="Twitter">Twitter</a>
-                <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                <a href="https://www.facebook.com/">Facebook</a>
+                <a href="https://x.com/">X</a>
+                <a href="https://Linkedin.com">LinkedIn</a>
             </div>
         </div>
     </footer>
 
-    <script src="js/contact.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
