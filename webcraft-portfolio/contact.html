@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - WebCraft Solutions</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>WebCraft Solutions</h1>
+            </div>
+            <nav class="nav" role="navigation">
+                <ul>
+                    <li><a href="index.html" aria-label="Accueil">Accueil</a></li>
+                    <li><a href="about.html" aria-label="À propos">À propos</a></li>
+                    <li><a href="contact.html" aria-label="Contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <h2>Contactez-nous</h2>
+            <p class="subtitle">Parlons de votre projet</p>
+        </div>
+    </section>
+
+    <section class="contact-content">
+        <div class="container">
+            <form id="contact-form" class="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="name">Nom complet <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required aria-required="true">
+                    <span class="error-text" id="name-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required aria-required="true">
+                    <span class="error-text" id="email-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message <span class="required">*</span></label>
+                    <textarea id="message" name="message" rows="6" required aria-required="true"></textarea>
+                    <span class="error-text" id="message-error"></span>
+                </div>
+
+                <button type="submit" class="btn-submit">Envoyer</button>
+            </form>
+
+            <div id="success-message" class="success-message" style="display: none;" role="alert">
+                <p>Merci pour votre message ! Nous vous répondrons dans les plus brefs délais.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 WebCraft Solutions. Tous droits réservés.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook">Facebook</a>
+                <a href="#" aria-label="Twitter">Twitter</a>
+                <a href="#" aria-label="LinkedIn">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/contact.js"></script>
+</body>
+</html>

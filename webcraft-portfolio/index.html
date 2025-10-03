@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebCraft Solutions - Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>WebCraft Solutions</h1>
+            </div>
+            <nav class="nav" role="navigation">
+                <ul>
+                    <li><a href="index.html" aria-label="Accueil">Accueil</a></li>
+                    <li><a href="about.html" aria-label="À propos">À propos</a></li>
+                    <li><a href="contact.html" aria-label="Contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2 class="hero-title">Transformez vos idées en réalité digitale</h2>
+            <p class="hero-subtitle">WebCraft Solutions crée des expériences web innovantes et performantes</p>
+        </div>
+    </section>
+
+    <!-- Loader -->
+    <div id="loader" class="loader" style="display: none;">
+        <div class="spinner"></div>
+        <p>Chargement des projets...</p>
+    </div>
+
+    <!-- Message d'erreur -->
+    <div id="error-message" class="error-message" style="display: none;" role="alert">
+        <p>Impossible de charger les projets. Veuillez réessayer.</p>
+    </div>
+
+    <!-- Filtres -->
+    <section class="filters-section">
+        <div class="container">
+            <h3>Filtrer par technologie</h3>
+            <div id="filters" class="filters">
+                <!-- Les boutons de filtre seront générés dynamiquement -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio">
+        <div class="container">
+            <h2>Nos Projets</h2>
+            <div id="projects-grid" class="projects-grid">
+                <!-- Les projets seront chargés ici via JavaScript -->
+            </div>
+            <div id="no-results" class="no-results" style="display: none;">
+                <p>Aucun projet trouvé pour cette technologie.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="modal" role="dialog" aria-hidden="true" aria-labelledby="modal-title">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Fermer la modal">&times;</button>
+            <div id="modal-body">
+                <!-- Le contenu du modal sera inséré ici -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 WebCraft Solutions. Tous droits réservés.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook">Facebook</a>
+                <a href="#" aria-label="Twitter">Twitter</a>
+                <a href="#" aria-label="LinkedIn">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
